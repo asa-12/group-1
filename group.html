@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+
+  <style>
+  
+
+    .bg {
+      background-color: rgb(189, 193, 193);
+      margin-top: 2%;
+    }
+
+
+    .imgeol {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      top: 10px;
+      left: 20px;
+
+      justify-content: space-between;
+      border: none;
+      margin-right: 40px;
+      z-index: 1;
+    }
+
+    img {
+
+      border-radius: 10px;
+      width: 650px;
+      height: 300px;
+      margin-left: 10px;
+    }
+
+    .our {
+      text-align: center;
+    }
+
+
+
+    /* Style the tab */
+    .tab {
+      position: absolute;
+      top: 0px;
+      float: left;
+      overflow: hidden;
+      border: none;
+      background-color: #f1f1f1;
+      width: 50%;
+      left: 49%;
+      border-radius: 10px 10px 0px 0px;
+      z-index: 1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+
+      padding: 14px 16px;
+     
+      font-size: 17px;
+
+
+    }
+
+    button {
+      margin-left: 15%;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+      border-radius: 3px;
+      border: 1px solid rgb(82, 82, 230);
+      width: 20%;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+      border: 1px solid blue;
+      width: 20%;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      position: absolute;
+      top: 45px;
+      left: 49%;
+      display: flex;
+      flex-wrap: wrap;
+      display: none;
+      padding: 6px 14px 6px;
+      background-color: #f1f1f1;
+      border-top: none;
+      width: 48%;
+      height: 240px;
+    }
+    .tabc{
+      position: absolute;
+      top: 45px;
+      left: 49%;
+      display: flex;
+      flex-wrap: wrap;
+      
+      padding: 6px 14px 6px;
+      background-color: #f1f1f1;
+      border-top: none;
+      width: 48%;
+      height: 240px;
+    
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg">
+    <div class="card col-sm-2">
+
+      <div class="w3-container" style="padding:128px 16px" id="work">
+        <div class="our">
+          <h1 style="font-size: 34px; color:rgb(15, 14, 14);">About</h1>
+          <p style="color: rgb(13, 157, 157);font-size: 20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+
+        <div class="imgeol">
+          <div class="img">
+            <img src="banner (1).webp" alt="bambu ambrela">
+          </div>
+          <!-- Tab panes -->
+          <div class="container">
+            <div class="tab card ">
+              <button class="tablinks" onclick="openCity(event, 'London')">History</button>
+              <button class="tablinks" onclick="openCity(event, 'Paris')">Vision</button>
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')">Goals</button>
+
+            </div>
+
+            <div id="London" class="tabc">
+              <h3>Hisory</h3>
+              
+              <P>I am a qualified and professional web developer with
+                2 years of experience in database administration and website
+                design.strong creative and analytical skills. Successful at
+                working towards deadlines and listening to feedback for best in class publishing. I
+                am excellent in working with others to achieve a certain objective
+                on time and with excellence.</P>
+            </div>
+
+            <div id="Paris" class="tabcontent" style="background-color: aquamarine;">
+              <h3>Vision</h3>
+            
+              <P>I am a qualified and professional web developer with
+                2 years of experience in database administration and website
+                design.strong creative and analytical skills. Successful at
+                working towards deadlines and listening to feedback for best in class publishing. I
+                am excellent in working with others to achieve a certain objective
+                on time and with excellence.</P>
+            </div>
+
+            <div id="Tokyo" class="tabcontent" style="background-color: antiquewhite;">
+              <h3>Goals</h3>
+            
+              <P>I am a qualified and professional web developer with
+                2 years of experience in database administration and website
+                design.strong creative and analytical skills. Successful at
+                working towards deadlines and listening to feedback for best in class publishing. I
+                am excellent in working with others to achieve a certain objective
+                on time and with excellence.</P>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+
+  </section>
+
+  </div>
+
+
+  </section>
+
+  </div>
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+
+</body>
+
+</html>
